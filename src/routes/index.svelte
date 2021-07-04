@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
+	import { variables } from '$lib/variables';
 
 	let triggerChat;
 	onMount(async () => {
@@ -42,6 +43,7 @@
 		<h2>chat with us</h2>
 	{:else}
 		<h2>join zoom</h2>
+		<a href={variables.zoom_url}>{variables.zoom_url}</a>
 		{#if noHeadphones}
 			<p>If you have headphones, please connect them now</p>
 		{/if}

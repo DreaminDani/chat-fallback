@@ -6,8 +6,9 @@ This app can be used as a way to "fallback" to a chat conversation for qualitati
 ## Work log
 - [x] Initial skeleton with SvelteKit
 - [x] Form that asks users if they're in a noisy environment / can use headphones
-- [ ] Show zoom link if qualified, show fallback page if not
+- [x] Show zoom link if qualified, show fallback page if not
 - [x] Integrate chat solution (Chaport) with fallback page
+- [ ] Add a speed test to determine if user should fallback to chat
 - [ ] Support URL Parameter to skip straight to chat
 - [ ] Styling cleanup / externalize branding assets
 - [ ] Externalize chat solution / support multiple chat solutions
@@ -18,6 +19,7 @@ This app can be used as a way to "fallback" to a chat conversation for qualitati
 In your environment's config (or just in a `.env` file in the root), add the following:
 
 ```
+VITE_ZOOM_URL=yourZoomMeetingURL
 VITE_CHAPORT_APPID=yourChaportAppId
 ```
 ### Optional environment variables
