@@ -5,9 +5,10 @@ This app can be used as a way to "fallback" to a chat conversation for qualitati
 
 ## Work log
 - [x] Initial skeleton with SvelteKit
-- [ ] Form that asks users if they're in a noisy environment / can use headphones
+- [x] Form that asks users if they're in a noisy environment / can use headphones
 - [ ] Show zoom link if qualified, show fallback page if not
 - [ ] Integrate chat solution (likely Chaport) with fallback page
+- [ ] Support URL Parameter to skip straight to chat
 - [ ] Styling cleanup / externalize branding assets
 - [ ] Externalize chat solution / support multiple chat solutions
 - [ ] Externalize video solution / support more than just a single zoom link
