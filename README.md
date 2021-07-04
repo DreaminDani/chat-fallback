@@ -7,12 +7,26 @@ This app can be used as a way to "fallback" to a chat conversation for qualitati
 - [x] Initial skeleton with SvelteKit
 - [x] Form that asks users if they're in a noisy environment / can use headphones
 - [ ] Show zoom link if qualified, show fallback page if not
-- [ ] Integrate chat solution (likely Chaport) with fallback page
+- [x] Integrate chat solution (Chaport) with fallback page
 - [ ] Support URL Parameter to skip straight to chat
 - [ ] Styling cleanup / externalize branding assets
 - [ ] Externalize chat solution / support multiple chat solutions
 - [ ] Externalize video solution / support more than just a single zoom link
 - [ ] Support for URL Parameters to allow user to be addressed by (user)name
+
+## Setup
+In your environment's config (or just in a `.env` file in the root), add the following:
+
+```
+VITE_CHAPORT_APPID=yourChaportAppId
+```
+### Optional environment variables
+
+`VITE_CHAPORT_SHOW_ONLOAD=true` will show the fallback chat popup when the page loads. **This only works with the Chaport integration.**
+
+### Using other chat solutions
+
+If you're not using Chaport as your chat fallback, you can replace the code in `lib/ChatCode.js` with your provider's embed code and chat open function(s).
 
 ## Developing
 

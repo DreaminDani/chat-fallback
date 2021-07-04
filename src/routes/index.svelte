@@ -1,4 +1,11 @@
 <script>
+	import { onMount } from 'svelte';
+
+	let triggerChat;
+	onMount(async () => {
+		const module = await import('$lib/ChatCode');
+		triggerChat = module.triggerChat;
+	});
 	let hasFinishedQuestions = false;
 	let isChatParticipant = false;
 	let noHeadphones = false;
@@ -9,6 +16,7 @@
 		if (options && options.forceChat) {
 			hasFinishedQuestions = true;
 			isChatParticipant = true;
+			triggerChat();
 		}
 		if (options && options.skipTo) {
 			for (let i = index + 1; i < options.skipTo; i++) {
