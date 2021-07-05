@@ -4,10 +4,12 @@ import adapter from '@sveltejs/adapter-static';
 const config = {
 	kit: {
 		target: '#svelte',
+		prerender: {
+			enabled: false
+		},
 		adapter: adapter({
-			// default options are shown
-			pages: 'build',
-			assets: 'build',
+			pages: 'docs',
+			assets: 'docs',
 			fallback: null
 		})
 	}
