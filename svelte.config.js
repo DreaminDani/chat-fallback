@@ -4,7 +4,6 @@ import adapter from '@sveltejs/adapter-static';
 const config = {
 	kit: {
 		target: '#svelte',
-		// Comment the paths config, if you want to run in dev mode.
 		// Remove if you're not using github pages (or don't need rel url)
 		paths: {
 			base: '/chat-fallback', // replace this with your url

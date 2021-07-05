@@ -39,7 +39,7 @@
 </svelte:head>
 
 <header>
-	<img height="100px" src="/favicon.png" alt="Company Logo" />
+	<img height="100px" src="/./favicon.png" alt="Company Logo" />
 	<h1>Join a session</h1>
 </header>
 <main>
