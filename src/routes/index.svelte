@@ -44,15 +44,35 @@
 <main>
 	<div class="content">
 		{#if hasFinishedQuestions}
-			<h1>Yay!</h1>
+			<h1>Thank you for your answers</h1>
 			{#if isChatParticipant}
-				<h2>chat with us</h2>
+				<h2>Type in the chat window to begin the conversation</h2>
 			{:else}
-				<h2>join zoom</h2>
-				<a href={variables.zoom_url}>{variables.zoom_url}</a>
+				<h2>Tap the button below to join the conversation</h2>
+				<a id="zoom-url" href={variables.zoom_url}>Join Zoom</a>
 				{#if noHeadphones}
 					<p>If you have headphones, please connect them now</p>
 				{/if}
+				<div class="download-zoom">
+					<h4>Don't have Zoom? Download it below:</h4>
+					<a
+						href="https://play.google.com/store/apps/details?id=us.zoom.videomeetings&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+						><img
+							alt="Get it on Google Play"
+							src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+						/></a
+					>
+					<a
+						id="apple"
+						href="https://apps.apple.com/us/app/zoom-cloud-meetings/id546505307?itsct=apps_box_badge&amp;itscg=30200"
+						style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 83px;"
+						><img
+							src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1344988800&h=d0f9a63b10ac7b51417f4ee15800b22c"
+							alt="Download on the App Store"
+							style="border-radius: 13px; width: 250px; height: 83px;"
+						/></a
+					>
+				</div>
 			{/if}
 		{:else}
 			<h2>Before we get started, please answer the following questions:</h2>
@@ -128,6 +148,7 @@
 		height: 100%;
 	}
 
+	#zoom-url,
 	button {
 		color: #e8eafc;
 		border: 2px solid #a19cdc;
@@ -145,9 +166,39 @@
 		margin-right: 0.5rem;
 	}
 
+	#zoom-url:hover,
 	button:hover {
 		color: #fff;
 		background-color: #a19cdc;
+	}
+
+	#zoom-url {
+		display: inline-block;
+		margin-top: 0.5rem;
+		font-size: 2rem;
+		text-align: center;
+	}
+
+	.download-zoom {
+		margin-top: 4rem;
+	}
+
+	.download-zoom h4 {
+		margin: 0;
+	}
+
+	.download-zoom img {
+		width: 200px;
+	}
+
+	.download-zoom #apple {
+		width: 180px !important;
+	}
+
+	.download-zoom #apple img {
+		padding-top: 17px;
+		height: 54px !important;
+		width: auto !important;
 	}
 
 	@media (max-width: 800px) {
