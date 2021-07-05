@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Join a session</title>
+
+		
+
+		<link rel="modulepreload" href="/./_app/start-8159498d.js">
+		<link rel="modulepreload" href="/./_app/chunks/vendor-f1f712b3.js">
+		<link rel="modulepreload" href="/./_app/layout.svelte-cf9458af.js">
+		<link rel="modulepreload" href="/./_app/pages/index.svelte-544c2c75.js">
+		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/index.svelte-7355d7af.css">
+
+		<script type="module">
+			import { start } from "/./_app/start-8159498d.js";
+			start({
+				target: document.querySelector("#svelte"),
+				paths: {"base":"","assets":"/."},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/./_app/layout.svelte-cf9458af.js"),
+						import("/./_app/pages/index.svelte-544c2c75.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "/",
+						query: new URLSearchParams(""),
+						params: {}
+					}
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<div id="svelte">
+
+
+
+
+<header class="svelte-1jj3xiv"><img height="100px" src="/favicon.png" alt="Company Logo" class="svelte-1jj3xiv">
+	<h1 class="svelte-1jj3xiv">Join a session</h1></header>
+<main class="svelte-1jj3xiv"><div class="content svelte-1jj3xiv"><h2 class="svelte-1jj3xiv">Before we get started, please answer the following questions:</h2>
+	<h3 class="svelte-1jj3xiv">Are you in a quiet place or somewhere without much background noise?</h3>
+		<button class="svelte-1jj3xiv">Yes </button>
+		<button class="svelte-1jj3xiv">No </button></div>
+</main>
+
+
+
+	
+</div>
+	</body>
+</html>
