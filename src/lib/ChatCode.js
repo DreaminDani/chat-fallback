@@ -12,16 +12,16 @@ export function triggerChat() {
 	});
 }
 
-export default (function (w, d, v3) {
+export function init(w, d, v3) {
 	w.chaportConfig = {
-		appId: variables.chaport_appId, // Provided by your environment variables
-		launcher: {
-			show: false
-		}
+			appId: variables.chaport_appId, // Provided by your environment variables
+			launcher: {
+					show: false
+			}
 	};
 
 	if (variables.chaport_show_onload) { // Provided by your environment variables
-		w.chaportConfig.launcher.show = true
+			w.chaportConfig.launcher.show = true
 	}
 
 	if (w.chaport) return;
@@ -29,11 +29,11 @@ export default (function (w, d, v3) {
 	v3._q = [];
 	v3._l = {};
 	v3.q = function () {
-		v3._q.push(arguments);
+			v3._q.push(arguments);
 	};
 	v3.on = function (e, fn) {
-		if (!v3._l[e]) v3._l[e] = [];
-		v3._l[e].push(fn);
+			if (!v3._l[e]) v3._l[e] = [];
+			v3._l[e].push(fn);
 	};
 	var s = d.createElement('script');
 	s.type = 'text/javascript';
@@ -41,4 +41,4 @@ export default (function (w, d, v3) {
 	s.src = 'https://app.chaport.com/javascripts/insert.js';
 	var ss = d.getElementsByTagName('script')[0];
 	ss.parentNode.insertBefore(s, ss);
-})(window, document);
+}(window, document);
